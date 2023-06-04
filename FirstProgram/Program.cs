@@ -1,12 +1,6 @@
 ﻿using System.Text;
 
-
-bool shouldContinue = true;
-
-while (shouldContinue)
-{
-
-    Console.OutputEncoding = Encoding.UTF8;
+Console.OutputEncoding = Encoding.UTF8;
 Console.WriteLine("Введіть число від 1 до 5");
 string a = Console.ReadLine();
 
@@ -36,31 +30,7 @@ else if (a == "5")
     Console.WriteLine("    / \\__\r\n   (    @\\___\r\n   /         O\r\n /   (_____/\r\n/_____/   U\r\n");
 }
 
-    else if (a == "вийти")
-    {
-        shouldContinue = false; // Встановити значення false, щоб вийти з циклу
-    }
-
-
-    else
+else
 {
     Console.WriteLine("Ви ввели невідомий текст.");
-}
-
-    if (shouldContinue)
-    {
-        Console.WriteLine("Бажаєте продовжити? (+/-)");
-        string continueInput = Console.ReadLine();
-
-        if (continueInput == "+")
-        {
-            shouldContinue = true; // Встановити значення true, щоб повернутися
-
-        }
-
-        else
-        {
-            shouldContinue = false; // Встановити значення false, щоб вийти з циклу
-        }
-    }
 }
