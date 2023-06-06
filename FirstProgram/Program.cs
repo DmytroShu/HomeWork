@@ -1,66 +1,27 @@
-﻿using System.Text;
+﻿
+int a = 786070;
+int b = 1000000;
+bool c = true;
 
 
-bool shouldContinue = true;
+//Console.WriteLine( (a - (a / 10000) * 10000) / 1000);
+//Console.WriteLine( (a - (a / 1000) * 1000) / 100);
+//Console.WriteLine( (a - (a / 100) * 100) / 10);
+//Console.WriteLine( (a - (a / 10) * 10) );             Очевидна циклічність
 
-while (shouldContinue)
+
+while (c == true)
 {
-
-    Console.OutputEncoding = Encoding.UTF8;
-    Console.WriteLine("Введіть число від 1 до 5");
-    string a = Console.ReadLine();
-
-    if (a == "1")
+   
+    Console.WriteLine(a / b);
+    a = a - (a / b * b);
+    b = b / 10;
+    if (b == 0)
     {
-        Console.WriteLine("     ccee88oo\r\n  C8O8O8Q8PoOb o8oo\r\n dOB69QO8PdUOpugoO9bD\r\nCgggbU8OU qOp qOdoUOdcb\r\n      6OuU  /p u gcoUodpP\r\n        \\\\\\//  /douUP\r\n           \\\\\\////\r\n             |||/\\\r\n             |||\\/\r\n             |||||\r\n       .....//||||\\....");
+        c = false;
 
-    }
-
-    else if (a == "2")
-    {
-        Console.WriteLine(" /\\_/\\  \r\n( o.o )\r\n > ^ <\r\n");
-    }
-
-    else if (a == "3")
-    {
-        Console.WriteLine("     ***     ***\r\n   **   ** **   **\r\n  **      *      **\r\n  **             **\r\n   **           **\r\n     **       **\r\n       **   **\r\n         ***\r\n");
-    }
-
-    else if (a == "4")
-    {
-        Console.WriteLine("* * * * * * =========================\r\n * * * * *  =========================\r\n* * * * * * =========================\r\n * * * * *  =========================\r\n* * * * * * =========================\r\n * * * * *  =========================\r\n* * * * * * =========================\r\n=====================================\r\n=====================================\r\n=====================================\r\n");
-    }
-
-    else if (a == "5")
-    {
-        Console.WriteLine("    / \\__\r\n   (    @\\___\r\n   /         O\r\n /   (_____/\r\n/_____/   U\r\n");
-    }
-
-    else if (a == "вийти")
-    {
-        shouldContinue = false; // Встановити значення false, щоб вийти з циклу
-    }
-
-
-    else
-    {
-        Console.WriteLine("Ви ввели невідомий текст.");
-    }
-
-    if (shouldContinue)
-    {
-        Console.WriteLine("\r\n\r\nБажаєте продовжити? (+/-)");
-        string continueInput = Console.ReadLine();
-
-        if (continueInput == "+")
-        {
-            shouldContinue = true; // Встановити значення true, щоб повернутися
-
-        }
-
-        else
-        {
-            shouldContinue = false; // Встановити значення false, щоб вийти з циклу
-        }
     }
 }
+
+
+Console.ReadLine();
