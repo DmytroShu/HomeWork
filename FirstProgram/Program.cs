@@ -1,8 +1,9 @@
 ﻿
-int a = 786070;
+int a = 15620;
 int b = 1000000;
+int d;
 bool c = true;
-
+string line = " ";
 
 //Console.WriteLine( (a - (a / 10000) * 10000) / 1000);
 //Console.WriteLine( (a - (a / 1000) * 1000) / 100);
@@ -12,14 +13,15 @@ bool c = true;
 
 while (c == true)
 {
-   
-    Console.WriteLine(a / b);
+    d = a / b;
+    line = line + d + " ";    
     a = a - (a / b * b);
     b = b / 10;
+
     if (b == 0)
     {
         c = false;
-
+        Console.WriteLine(line);
     }
 }
 
