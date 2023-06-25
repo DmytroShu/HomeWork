@@ -6,22 +6,24 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter you number");
-            int val = int.Parse (Console.ReadLine());
-            if (val > 2)
+            for (int i = 1; i < 150; i++)
             {
-                Console.WriteLine(FindPrimeNumber(val));  //Search initialization
+                //Console.WriteLine("Enter you number");
+                int val = i; //int.Parse(Console.ReadLine());
+                if (val > 2)
+                {
+                    Console.WriteLine(FindPrimeNumber(val));  //Search initialization
+                }
+                else if (val == 2)
+                {
+                    Console.WriteLine("3");
+                }
+                else if (val == 1)
+                {
+                    Console.WriteLine("2");
+                }
+                else Console.WriteLine("Error");
             }
-            else if (val == 2)
-            {
-                Console.WriteLine("3");
-            }
-            else if (val == 1)
-            {
-                Console.WriteLine("2");
-            }
-            else Console.WriteLine("Error");
-
         }
         static int FindPrimeNumber(int value)   //Search by order
         {
