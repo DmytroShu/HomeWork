@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _7_Cars
 {
-    public class Car
+    public abstract class Car
     {
         public int speed = 0;
         public int maxSpeed = 180;
