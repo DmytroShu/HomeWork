@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Work№4", "Work№4\Work�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№5", "№5\№5.csproj", "{2DD6EB4C-D05C-424C-9D7D-3D3E8881DAC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№6 Telephone Book", "№6 Telephone Book\№6 Telephone Book.csproj", "{2C4CD57F-C2CF-4199-9C45-1E8ACB74AE39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№6 Telephone Book", "№6 Telephone Book\№6 Telephone Book.csproj", "{2C4CD57F-C2CF-4199-9C45-1E8ACB74AE39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test Work", "Test Work\Test Work.csproj", "{EF61A546-32A1-466C-97DF-51F04C4A87FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№7 Cars", "№7 Cars\№7 Cars.csproj", "{83FDDD34-3025-48E7-B54C-9D3D2DF58ADE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{2C4CD57F-C2CF-4199-9C45-1E8ACB74AE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C4CD57F-C2CF-4199-9C45-1E8ACB74AE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C4CD57F-C2CF-4199-9C45-1E8ACB74AE39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF61A546-32A1-466C-97DF-51F04C4A87FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF61A546-32A1-466C-97DF-51F04C4A87FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF61A546-32A1-466C-97DF-51F04C4A87FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF61A546-32A1-466C-97DF-51F04C4A87FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83FDDD34-3025-48E7-B54C-9D3D2DF58ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83FDDD34-3025-48E7-B54C-9D3D2DF58ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83FDDD34-3025-48E7-B54C-9D3D2DF58ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83FDDD34-3025-48E7-B54C-9D3D2DF58ADE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
