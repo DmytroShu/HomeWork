@@ -210,38 +210,33 @@ namespace _7_Cars
     }
     public class Mercedes : Car
     {
-        public Mercedes()
-        {
-            maxSpeed = 200;
-        }
         public override void driving()
         {
+            maxSpeed = 200;
             base.driving();
         }
     }
     public class BMW : Car
     {
-        public BMW()
+        public override void driving()
         {
             maxSpeed = 250;
             gas = 15;
             brakes = 10;
-        }
-        public override void driving()
-        {
+
             base.driving();
         }
     }
     public class Volkswagen : Car
     {
-        public Volkswagen()
+        
+        public override void driving()
         {
+
             maxSpeed = 220;
             gas = 10;
             brakes = 15;
-        }
-        public override void driving()
-        {
+
             base.driving();
         }
     }
