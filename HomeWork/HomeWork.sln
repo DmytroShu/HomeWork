@@ -20,7 +20,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№9 Boxing", "№9 Boxing\№9 Boxing.csproj", "{16592CA6-36C8-45EA-88BE-FB7CFDD663A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№9 Boxing", "№9 Boxing\№9 Boxing.csproj", "{16592CA6-36C8-45EA-88BE-FB7CFDD663A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№10 Cars (fix)", "№10 Cars (fix)\№10 Cars (fix).csproj", "{36AB816A-3B12-4872-B1B8-31EDB1800C8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{16592CA6-36C8-45EA-88BE-FB7CFDD663A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16592CA6-36C8-45EA-88BE-FB7CFDD663A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16592CA6-36C8-45EA-88BE-FB7CFDD663A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36AB816A-3B12-4872-B1B8-31EDB1800C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36AB816A-3B12-4872-B1B8-31EDB1800C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36AB816A-3B12-4872-B1B8-31EDB1800C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36AB816A-3B12-4872-B1B8-31EDB1800C8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,11 +13,11 @@
         void HeatOn();
         void HeatOff();
     }
-    public abstract class Car : IRadio , ISeats
+    public abstract class Car : IRadio, ISeats
     {
         private bool adjustPosition = false;
         private int radioStation;
-        private string radioName;
+        private string? radioName;
         private int volume = 40;
         private bool radioOn = false;
         private string heat = "Off";
@@ -75,14 +75,14 @@
             switch (choice)
             {
                 case "1":
-                    speed = speed + gas;
+                    speed += gas;
                     if (speed > maxSpeed)
                     {
                         speed = maxSpeed;
                     };
                     break;
                 case "2":
-                    speed = speed - brakes;
+                    speed -= brakes;
                     if (speed < 0)
                     {
                         speed = 0;
@@ -98,7 +98,7 @@
                     IncreaseVolume(true);
                     break;
                 case "6":
-                    IncreaseVolume(false); 
+                    IncreaseVolume(false);
                     break;
                 case "7":
                     AdjustPosition();
@@ -140,8 +140,8 @@
         {
             if (radioStation == 0)
             {
-                Random random = new Random();
-                radioStation = random.Next(1,5);
+                Random random = new();
+                radioStation = random.Next(1, 5);
             }
             else if (radioStation >= 4)
             {
@@ -165,7 +165,8 @@
                 case 4:
                     radioName = "Nashe Radio";
                     break;
-                default: Console.WriteLine("Pshhh... psh.. PSHHSHHSHSHS!!!");
+                default:
+                    Console.WriteLine("Pshhh... psh.. PSHHSHHSHSHS!!!");
                     break;
             }
         }
@@ -175,9 +176,9 @@
             {
                 if (vol == true)
                 {
-                    volume = volume + 10;
+                    volume += 10;
                 }
-                else volume = volume - 10;
+                else volume -= 10;
             }
             if (volume > 100)
             {
@@ -199,38 +200,6 @@
         public void HeatOff()
         {
             heat = "Off";
-        }
-    }
-    public class Mercedes : Car
-    {
-        public override void driving()
-        {
-            maxSpeed = 200;
-            base.driving();
-        }
-    }
-    public class BMW : Car
-    {
-        public override void driving()
-        {
-            maxSpeed = 250;
-            gas = 15;
-            brakes = 10;
-
-            base.driving();
-        }
-    }
-    public class Volkswagen : Car
-    {
-        
-        public override void driving()
-        {
-
-            maxSpeed = 220;
-            gas = 10;
-            brakes = 15;
-
-            base.driving();
         }
     }
 }
