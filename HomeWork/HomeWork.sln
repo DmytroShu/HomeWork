@@ -15,14 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test Work", "Test Work\Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№7 Cars", "№7 Cars\№7 Cars.csproj", "{83FDDD34-3025-48E7-B54C-9D3D2DF58ADE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DA0D6333-C293-4FB3-AD75-6D72D53F85CD}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№9 Boxing", "№9 Boxing\№9 Boxing.csproj", "{16592CA6-36C8-45EA-88BE-FB7CFDD663A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№10 Cars (fix)", "№10 Cars (fix)\№10 Cars (fix).csproj", "{36AB816A-3B12-4872-B1B8-31EDB1800C8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№10 Cars (fix)", "№10 Cars (fix)\№10 Cars (fix).csproj", "{36AB816A-3B12-4872-B1B8-31EDB1800C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№11 Calculator+", "№11 Calculator+\№11 Calculator+.csproj", "{48675000-8BF6-4565-9739-28913FC16736}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +59,10 @@ Global
 		{36AB816A-3B12-4872-B1B8-31EDB1800C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36AB816A-3B12-4872-B1B8-31EDB1800C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36AB816A-3B12-4872-B1B8-31EDB1800C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48675000-8BF6-4565-9739-28913FC16736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48675000-8BF6-4565-9739-28913FC16736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48675000-8BF6-4565-9739-28913FC16736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48675000-8BF6-4565-9739-28913FC16736}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
