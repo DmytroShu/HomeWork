@@ -43,7 +43,7 @@ internal class Program
             catch (Exception ex)
             {
                 Console.Clear();
-                Console.WriteLine(value: $"ERROR: ({ex.ToString()}) You can try agene");
+                Console.WriteLine(value: $"ERROR: ({ex}) You can try agene");
                 Console.ReadLine();
             }
         }
