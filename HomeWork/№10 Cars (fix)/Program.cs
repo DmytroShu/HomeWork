@@ -23,16 +23,16 @@ internal class Program
                 {
                     case "1":
                         car = new Mercedes();
-                        car.driving();
+                        car.Driving();
                         break;
                     case "2":
                         car = new Bmw();
-                        car.driving();
+                        car.Driving();
                         break;
 
                     case "3":
                         car = new Volkswagen();
-                        car.driving();
+                        car.Driving();
                         break;
                     case "0":
                         return;

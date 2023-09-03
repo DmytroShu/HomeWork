@@ -26,95 +26,107 @@
         public int gas = 10;
         public int brakes = 10;
         public string choice;
-        public virtual void driving()
+        public virtual void Driving()
         {
             while (true)
             {
-                Console.Clear();
-                Console.WriteLine("Your speed: " + speed);
-                if (radioOn == true)
+                try
                 {
-                    Console.WriteLine("Station name: " + radioName);
-                    Console.WriteLine("Volume: " + volume);
+                    Console.Clear();
+                    Console.WriteLine("Your speed: " + speed);
+                    if (radioOn == true)
+                    {
+                        Console.WriteLine("Station name: " + radioName);
+                        Console.WriteLine("Volume: " + volume);
+                    }
+                    if (adjustPosition == true)
+                    {
+                        Console.WriteLine("The seat position is adjusted");
+                    }
+                    Console.WriteLine("Heat " + heat);
+                    Console.WriteLine();
+                    Console.WriteLine("1 - Gas");
+                    Console.WriteLine("2 - Brakes");
+                    if (radioOn == false)
+                    {
+                        Console.WriteLine("3 - Radio on");
+                    }
+                    else
+                    {
+                        Console.WriteLine("3 - Radio Off");
+                        Console.WriteLine("4 - Change station");
+                        Console.WriteLine("5 - Volume +");
+                        Console.WriteLine("6 - Volume -");
+                    }
+                    if (adjustPosition == false)
+                    {
+                        Console.WriteLine("7 - Adjust position");
+                    }
+                    Console.WriteLine("8 - Heat On");
+                    Console.WriteLine("9 - Heat Off");
+                    Console.WriteLine();
+                    Console.WriteLine("0 - Exit");
+                    Mechanism();
+                    if (choice == "0")
+                    { return; }
                 }
-                if (adjustPosition == true)
-                {
-                    Console.WriteLine("The seat position is adjusted");
-                }
-                Console.WriteLine("Heat " + heat);
-                Console.WriteLine();
-                Console.WriteLine("1 - Gas");
-                Console.WriteLine("2 - Brakes");
-                if (radioOn == false)
-                {
-                    Console.WriteLine("3 - Radio on");
-                }
-                else
-                {
-                    Console.WriteLine("3 - Radio Off");
-                    Console.WriteLine("4 - Change station");
-                    Console.WriteLine("5 - Volume +");
-                    Console.WriteLine("6 - Volume -");
-                }
-                if (adjustPosition == false)
-                {
-                    Console.WriteLine("7 - Adjust position");
-                }
-                Console.WriteLine("8 - Heat On");
-                Console.WriteLine("9 - Heat Off");
-                Console.WriteLine();
-                Console.WriteLine("0 - Exit");
-                Mechanism();
-                if (choice == "0")
-                { return; }
+                catch (Exception e) { Console.WriteLine(e.ToString()); }
             }
         }
         public void Mechanism()
         {
             choice = Console.ReadLine();
-            switch (choice)
+            try
             {
-                case "1":
-                    speed += gas;
-                    if (speed > maxSpeed)
-                    {
-                        speed = maxSpeed;
-                    };
-                    break;
-                case "2":
-                    speed -= brakes;
-                    if (speed < 0)
-                    {
-                        speed = 0;
-                    }
-                    break;
-                case "3":
-                    TurnOn();
-                    break;
-                case "4":
-                    ChangeStation();
-                    break;
-                case "5":
-                    IncreaseVolume(true);
-                    break;
-                case "6":
-                    IncreaseVolume(false);
-                    break;
-                case "7":
-                    AdjustPosition();
-                    break;
-                case "8":
-                    HeatOn();
-                    break;
-                case "9":
-                    HeatOff();
-                    break;
-                case "0":
-                    return;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("Invalid choice. Please try again.");
-                    break;
+                switch (choice)
+                {
+                    case "1":
+                        speed += gas;
+                        if (speed > maxSpeed)
+                        {
+                            speed = maxSpeed;
+                        };
+                        break;
+                    case "2":
+                        speed -= brakes;
+                        if (speed < 0)
+                        {
+                            speed = 0;
+                        }
+                        break;
+                    case "3":
+                        TurnOn();
+                        break;
+                    case "4":
+                        ChangeStation();
+                        break;
+                    case "5":
+                        IncreaseVolume(true);
+                        break;
+                    case "6":
+                        IncreaseVolume(false);
+                        break;
+                    case "7":
+                        AdjustPosition();
+                        break;
+                    case "8":
+                        HeatOn();
+                        break;
+                    case "9":
+                        HeatOff();
+                        break;
+                    case "0":
+                        return;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Invalid choice. Please try again.");
+                        break;
+                }
+            }
+            catch 
+            {
+                Console.WriteLine("error");
+                Console.ReadLine();
             }
         }
         public void TurnOn()
