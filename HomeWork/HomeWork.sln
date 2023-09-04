@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№10 Cars (fix)", "№10 C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№11 Calculator+", "№11 Calculator+\№11 Calculator+.csproj", "{48675000-8BF6-4565-9739-28913FC16736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№12 LargeNumber", "№12 LargeNumber\№12 LargeNumber.csproj", "{56C8E677-DF12-4AC3-ABF9-DFDB9038EE23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№12 LargeNumber", "№12 LargeNumber\№12 LargeNumber.csproj", "{56C8E677-DF12-4AC3-ABF9-DFDB9038EE23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№13 LINQ", "№13 LINQ\№13 LINQ.csproj", "{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{56C8E677-DF12-4AC3-ABF9-DFDB9038EE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56C8E677-DF12-4AC3-ABF9-DFDB9038EE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56C8E677-DF12-4AC3-ABF9-DFDB9038EE23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
