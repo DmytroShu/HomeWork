@@ -19,23 +19,23 @@ internal class Program
                     break;
                 case "2":
                     Console.Clear();
-                    Show(list);
+                    Print(list);
                     Console.ReadLine();
                     break;
                 case "3":
                     Console.Clear();
-                    Show(list.OrderBy(x => x).ToList());
+                    Print(list.OrderBy(x => x).ToList());
                     Console.ReadLine();
                     break;
                 case "4":
                     Console.Clear();
-                    Show(list.OrderByDescending(x => x).ToList());
+                    Print(list.OrderByDescending(x => x).ToList());
                     Console.ReadLine();
                     break;
                 case "5":
                     Console.Clear();
                     _ = int.TryParse(Console.ReadLine(), out int num);
-                    Show(list.Where(x => x == num).ToList());
+                    Print(list.Where(x => x == num).ToList());
                     Console.ReadLine();
                     break;
                 case "6":
@@ -75,7 +75,7 @@ internal class Program
         Console.WriteLine("0. - Exit");
         Console.WriteLine();
     }
-    static void Show( List<int> list )
+    static void Print( List<int> list )
     {
         for (int i = 0; i < list.Count; i++)
         {
