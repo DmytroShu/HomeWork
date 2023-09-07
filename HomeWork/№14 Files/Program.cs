@@ -1,7 +1,6 @@
-﻿
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
-namespace Test
+namespace _14_Files
 {
     internal class Program
     {
@@ -11,7 +10,7 @@ namespace Test
             ErrorFile.WriteError(filePath);
             ReadFile(filePath);
         }
-       
+
         static void Statistic(List<string> list, int counter)
         {
             string filePath = "C:\\Users\\dimos\\OneDrive\\Рабочий стол\\LogFileInfo.txt";
@@ -67,7 +66,7 @@ namespace Test
             List<VersLog> errorItems = count.Select((c, index) => new VersLog { code = c, log = lines[index] }).ToList();
             errorItems.OrderBy(item => item.code).ToList();
             using StreamWriter writer = new(filePath, true);
-            
+
             foreach (var item in errorItems)
             {
                 writer.WriteLine($"Count error: {item.code}, Error: {item.log}");

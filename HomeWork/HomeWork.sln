@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№5", "№5\№5.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№6 Telephone Book", "№6 Telephone Book\№6 Telephone Book.csproj", "{2C4CD57F-C2CF-4199-9C45-1E8ACB74AE39}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№14 Files", "Test Work\№14 Files.csproj", "{EF61A546-32A1-466C-97DF-51F04C4A87FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test Work\Test.csproj", "{EF61A546-32A1-466C-97DF-51F04C4A87FF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№7 Cars", "№7 Cars\№7 Cars.csproj", "{83FDDD34-3025-48E7-B54C-9D3D2DF58ADE}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№12 LargeNumber", "№12 LargeNumber\№12 LargeNumber.csproj", "{56C8E677-DF12-4AC3-ABF9-DFDB9038EE23}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№13 LINQ", "№13 LINQ\№13 LINQ.csproj", "{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№14 Files", "№14 Files\№14 Files.csproj", "{805672E0-1041-4242-A1A8-A616C7056AF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7E8FEB2-F7D3-42E9-AF7A-C9243F2CECD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{805672E0-1041-4242-A1A8-A616C7056AF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{805672E0-1041-4242-A1A8-A616C7056AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{805672E0-1041-4242-A1A8-A616C7056AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{805672E0-1041-4242-A1A8-A616C7056AF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

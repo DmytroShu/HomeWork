@@ -1,6 +1,4 @@
-﻿
-namespace Test
-
+﻿namespace _14_Files
 {
     public class ErrorFile
     {
@@ -83,7 +81,7 @@ namespace Test
         }
         static public void WriteError(string filePath)
         {
-            
+
             string a = "2023";
             string b = "-0";
             string c = "-";
