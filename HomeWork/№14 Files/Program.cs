@@ -6,14 +6,14 @@ namespace _14_Files
     {
         static void Main(string[] args)
         {
-            string filePath = "C:\\Users\\dimos\\OneDrive\\Рабочий стол\\LogFile.txt";
+            string filePath = "C:\\LogFile.txt";
             ErrorFile.WriteError(filePath);
             ReadFile(filePath);
         }
 
         static void Statistic(List<string> list, int counter)
         {
-            string filePath = "C:\\Users\\dimos\\OneDrive\\Рабочий стол\\LogFileInfo.txt";
+            string filePath = "C:\\LogFileInfo.txt";
             List<string> lines = new()
             {
                 "FATAL: Operating system crash - it is impossible to continue work",
@@ -24,9 +24,11 @@ namespace _14_Files
                 "ERROR: Error working with the file system - the file does not exist",
                 "ERROR: JSON data parsing error - incorrect JSON object format",
                 "ERROR: Unable to save file - insufficient access rights",
-                "ERROR: Network error - loss of connection with the server"
+                "ERROR: Network error - loss of connection with the server",
+                "WARNING",
+                "INFO"
             };
-            List<int> count = new() { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            List<int> count = new() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
             string[] args;
             for (int i = 0; i < list.Count; i++)
             {
@@ -62,6 +64,14 @@ namespace _14_Files
                         count[8]++;
                         break;
                 }
+                if (args[2] == "3.1" || args[2] == "3.2" || args[2] == "3.3" || args[2] == "3.4" || args[2] == "3.5") 
+                {
+                    count[9]++;
+                }
+                else if (args[2] == "4.1" || args[2] == "4.2" || args[2] == "4.3" || args[2] == "4.4" || args[2] == "4.5" || args[2] == "4.6" || args[2] == "4.7")
+                {
+                    count[10]++;
+                }
             }
             List<VersLog> errorItems = count.Select((c, index) => new VersLog { code = c, log = lines[index] }).ToList();
             errorItems.OrderBy(item => item.code).ToList();
@@ -69,7 +79,7 @@ namespace _14_Files
 
             foreach (var item in errorItems)
             {
-                writer.WriteLine($"Count error: {item.code}, Error: {item.log}");
+                writer.WriteLine($"Number of messages: {item.code}, Messages: {item.log}");
             }
             writer.WriteLine($"Total messages: {counter}");
         }

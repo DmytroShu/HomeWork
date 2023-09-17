@@ -2,6 +2,9 @@
 {
     internal class Classes
     {
-
+        static void BasicClass ()
+        {
+            
+        }
     }
 }

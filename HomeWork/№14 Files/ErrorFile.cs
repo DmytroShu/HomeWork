@@ -25,7 +25,7 @@
         static string RandomError()
         {
             Random random = new();
-            int val = random.Next(1, 6);
+            int val = random.Next(1, 11);
             int val2;
             string error = "";
             if (val == 1)
@@ -77,7 +77,28 @@
                         return " 3.5 - WARNING: Limited bandwidth of the network - possible problems in the operation of applications";
                 }
             }
-            return error;
+            else if (val > 6 && val <= 10)
+            {
+                val2 = random.Next(1, 8);
+                switch (val2)
+                {
+                    case 1:
+                        return " 4.1 - INFO: The program has been successfully launched";
+                    case 2:
+                        return " 4.2 - INFO: Calculation completed successfully";
+                    case 3:
+                        return " 4.3 - INFO: The user performed the \"Save\" operation";
+                    case 4:
+                        return " 4.4 - INFO: The operation completed without errors";
+                    case 5:
+                        return " 4.5 - INFO: The program has ended";
+                    case 6:
+                        return " 4.6 - INFO: The system has successfully backed up data";
+                    case 7:
+                        return " 4.7 - INFO: Task \"Clean up temporary files\" completed successfully";
+                }
+            }
+                return error;
         }
         static public void WriteError(string filePath)
         {
@@ -91,45 +112,55 @@
             int monthDay = 31;
             string str = "";
             Random random = new();
-
-            for (int i = 0; i < 5; i++)
+            try
             {
-                int ran = random.Next(10, 50);
-                for (int j = 0; j <= ran; j++)
+                for (int i = 0; i < 5; i++)
                 {
-                    if (day >= monthDay)
+                    int ran = random.Next(10, 50);
+                    for (int j = 0; j <= ran; j++)
                     {
-                        month++;
-                        day = 1;
-                    }
-                    if (month == 2)
-                    {
-                        monthDay = 28;
-                    }
-                    if (month == 3 || month == 5)
-                    {
-                        monthDay = 31;
-                    }
-                    if (month == 4)
-                    {
-                        monthDay = 30;
-                    }
-                    day++;
-                    if (day < 10)
-                    {
-                        str = a + b + month + c + "0" + day + " " + RandomTime() + ver + i + RandomError();
-                        using StreamWriter writer = new(filePath, true);
-                        writer.WriteLine(str);
+                        if (day >= monthDay)
+                        {
+                            month++;
+                            day = 1;
+                        }
+                        if (month == 2)
+                        {
+                            monthDay = 28;
+                        }
+                        if (month == 3 || month == 5)
+                        {
+                            monthDay = 31;
+                        }
+                        if (month == 4)
+                        {
+                            monthDay = 30;
+                        }
+                        day++;
+                        if (day < 10)
+                        {
+                            str = a + b + month + c + "0" + day + " " + RandomTime() + ver + i + RandomError();
+                            using StreamWriter writer = new(filePath, true);
+                            writer.WriteLine(str);
 
-                    }
-                    else
-                    {
-                        str = a + b + month + c + day + " " + RandomTime() + ver + i + RandomError();
-                        using StreamWriter writer = new(filePath, true);
-                        writer.WriteLine(str);
+                        }
+                        else
+                        {
+                            str = a + b + month + c + day + " " + RandomTime() + ver + i + RandomError();
+                            using StreamWriter writer = new(filePath, true);
+                            writer.WriteLine(str);
+                        }
                     }
                 }
             }
+            catch (Exception e)
+            {
+                Console.Write("Error: ");
+                Console.Write(e.ToString());
+                Console.WriteLine();
+                Console.WriteLine("File not created");
+            }
+            
         }
     }
 }

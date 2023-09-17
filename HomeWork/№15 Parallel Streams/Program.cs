@@ -1,4 +1,4 @@
-﻿namespace Test
+﻿namespace _15_Parallel_Streams
 {
     internal class Program
     {
@@ -30,8 +30,8 @@
                         break;
                 }
             }
-            
-            
+
+
 
         }
         static void PrintNumbers()

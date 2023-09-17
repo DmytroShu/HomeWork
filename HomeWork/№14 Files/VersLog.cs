@@ -6,6 +6,4 @@
         public int code { get; set; }
         public string log { get; set; }
     }
-    }
-
 }
