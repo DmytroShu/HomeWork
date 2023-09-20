@@ -6,14 +6,14 @@ namespace _14_Files
     {
         static void Main(string[] args)
         {
-            string filePath = "C:\\LogFile.txt";
+            string filePath = "C:\\Users\\dimos\\OneDrive\\Рабочий стол\\LogFile.txt";
             ErrorFile.WriteError(filePath);
             ReadFile(filePath);
         }
 
         static void Statistic(List<string> list, int counter)
         {
-            string filePath = "C:\\LogFileInfo.txt";
+            string filePath = "C:\\Users\\dimos\\OneDrive\\Рабочий стол\\LogFileInfo.txt";
             List<string> lines = new()
             {
                 "FATAL: Operating system crash - it is impossible to continue work",

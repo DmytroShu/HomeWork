@@ -1,99 +1,79 @@
-﻿namespace Test
+﻿using System.Collections.Concurrent;
+using System.Diagnostics;
+
+namespace Test
 {
-    internal class Program
+    class Program
     {
+        private static readonly object syncObject = new();
         static void Main(string[] args)
         {
-            while (true)
+            Stopwatch sw1 = new();
+            Stopwatch sw2 = new();
+            int[] numbers = Enumerable.Range(1, 1000000).ToArray();
+
+            int threadCount = args.Length > 0 ? int.Parse(args[0]) : ReadThreadCountConsole();
+
+            sw1.Start();
+            long sum = Calculate(numbers, threadCount);
+            sw1.Stop();
+            Console.WriteLine("Sum: " + sum);
+            Console.WriteLine("Time: " + sw1.Elapsed.TotalMilliseconds);
+
+            sw2.Start();
+            long sum2 = CalculateOne(numbers);
+            sw2.Stop();
+            Console.WriteLine("Sum: " + sum2);
+            Console.WriteLine("Time: " + sw2.Elapsed.TotalMilliseconds);
+        }
+
+        static long Calculate(int[] numbers, int threadCount)
+        {
+            long sum = 0;
+
+            // We divide the array of numbers into parts for processing in different streams
+            var partitions = Partitioner.Create(0, numbers.Length, numbers.Length / threadCount);
+
+            Parallel.ForEach(partitions, range =>
             {
-                Console.Clear();
-                Console.WriteLine("1 - display numbers from 1 to 10");
-                Console.WriteLine("2 - display the letters A, B, C,");
-                Console.WriteLine("0 - Exit");
-                string str = Console.ReadLine();
-                switch (str)
+                long localSum = 0;
+
+                for (int i = range.Item1; i < range.Item2; i++)
                 {
-                    case "1":
-                        Console.Clear();
-                        PrintNumbers();
-                        Console.ReadLine();
-                        break;
-                    case "2":
-                        Console.Clear();
-                        PrintLetters();
-                        Console.ReadLine();
-                        break;
-                    case "0":
-                        return;
-                    default:
-                        Console.WriteLine("Error - Try again");
-                        break;
+                    localSum += CalculateSum(numbers[i]);
                 }
+
+                lock (syncObject)
+                {
+                    sum += localSum;
+                }
+            });
+
+            return sum;
+        }
+        static long CalculateOne(int[] numbers)
+        {
+            long sum = 0;
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    sum += CalculateSum(numbers[i]);
+                }
+            return sum;
+        }
+        static long CalculateSum(int number)
+        {
+            return (long)number * number;
+        }
+
+        static int ReadThreadCountConsole()
+        {
+            Console.Write("Enter the number of threads to run in parallel: ");
+            int threadCount;
+            while (!int.TryParse(Console.ReadLine(), out threadCount) || threadCount <= 0)
+            {
+                Console.Write("Enter the correct number of threads: ");
             }
-            
-            
-
-        }
-        static void PrintNumbers()
-        {
-            Thread thread1 = new(() =>
-            {
-                int a = -1;
-                for (int i = 0; i < 5; i++)
-                {
-                    Thread.Sleep(1);
-                    Console.Write(a += 2);
-                    Console.Write(" ");
-                    Thread.Sleep(99);
-                }
-            });
-
-            Thread thread2 = new(() =>
-            {
-                int b = 0;
-                for (int i = 0; i < 5; i++)
-                {
-                    Thread.Sleep(100);
-                    Console.Write(b += 2);
-                    Console.Write(" ");
-                }
-            });
-            thread1.Start();
-            thread2.Start();
-        }
-        static void PrintLetters()
-        {
-            Thread thread1 = new(() =>
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    Thread.Sleep(1);
-                    Console.Write("A ");
-                    Thread.Sleep(199);
-                }
-            });
-
-            Thread thread2 = new(() =>
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    Thread.Sleep(100);
-                    Console.Write("B ");
-                    Thread.Sleep(100);
-                }
-            });
-            Thread thread3 = new(() =>
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    Thread.Sleep(200);
-                    Console.WriteLine("C");
-
-                }
-            });
-            thread1.Start();
-            thread2.Start();
-            thread3.Start();
+            return threadCount;
         }
     }
 }

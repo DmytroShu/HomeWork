@@ -1,0 +1,12 @@
+Number of messages: 6, Messages: FATAL: Operating system crash - it is impossible to continue work
+Number of messages: 3, Messages: FATAL: Unable to load an important program module - system failure
+Number of messages: 8, Messages: FATAL: There is no connection to the database - the required data cannot be loaded
+Number of messages: 4, Messages: ERROR: Unable to complete the operation - insufficient resources
+Number of messages: 2, Messages: ERROR: Configuration error - wrong configuration file
+Number of messages: 4, Messages: ERROR: Error working with the file system - the file does not exist
+Number of messages: 4, Messages: ERROR: JSON data parsing error - incorrect JSON object format
+Number of messages: 2, Messages: ERROR: Unable to save file - insufficient access rights
+Number of messages: 6, Messages: ERROR: Network error - loss of connection with the server
+Number of messages: 40, Messages: WARNING
+Number of messages: 58, Messages: INFO
+Total messages: 137
