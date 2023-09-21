@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№13 LINQ", "№13 LINQ\�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№14 Files", "№14 Files\№14 Files.csproj", "{805672E0-1041-4242-A1A8-A616C7056AF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№15 Parallel Streams", "№15 Parallel Streams\№15 Parallel Streams.csproj", "{1A96D1C8-FD25-4D11-9509-5C1D2BDD2A82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№15 Parallel Streams", "№15 Parallel Streams\№15 Parallel Streams.csproj", "{1A96D1C8-FD25-4D11-9509-5C1D2BDD2A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№16 TPL", "№16 TPL\№16 TPL.csproj", "{9AE7E47D-ED8A-40DB-8E52-B3D4CDC3733E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{1A96D1C8-FD25-4D11-9509-5C1D2BDD2A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A96D1C8-FD25-4D11-9509-5C1D2BDD2A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A96D1C8-FD25-4D11-9509-5C1D2BDD2A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE7E47D-ED8A-40DB-8E52-B3D4CDC3733E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE7E47D-ED8A-40DB-8E52-B3D4CDC3733E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE7E47D-ED8A-40DB-8E52-B3D4CDC3733E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE7E47D-ED8A-40DB-8E52-B3D4CDC3733E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
