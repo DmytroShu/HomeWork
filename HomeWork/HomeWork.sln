@@ -31,7 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№15 Parallel Streams", "�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№16 TPL", "№16 TPL\№16 TPL.csproj", "{9AE7E47D-ED8A-40DB-8E52-B3D4CDC3733E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№17 Task-based Asynchronous Pattern", "№17 Task-based Asynchronous Pattern\№17 Task-based Asynchronous Pattern.csproj", "{C63D48AD-57FD-4124-9EBB-F921DCE376B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "№17 Task-based Asynchronous Pattern", "№17 Task-based Asynchronous Pattern\№17 Task-based Asynchronous Pattern.csproj", "{C63D48AD-57FD-4124-9EBB-F921DCE376B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№18 Parallel LINQ", "№18 Parallel LINQ\№18 Parallel LINQ.csproj", "{B6B648BF-3D1A-422E-AAAA-A30640701F04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№19 reflection", "№19 reflection\№19 reflection.csproj", "{88F36C84-7008-4FD0-8D1A-34F42B2AA38F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "№20 Garbage collection", "№20 Garbage collection\№20 Garbage collection.csproj", "{6DC8D422-FF74-42E6-B3F8-A82B42DF62D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +105,18 @@ Global
 		{C63D48AD-57FD-4124-9EBB-F921DCE376B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C63D48AD-57FD-4124-9EBB-F921DCE376B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C63D48AD-57FD-4124-9EBB-F921DCE376B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B648BF-3D1A-422E-AAAA-A30640701F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B648BF-3D1A-422E-AAAA-A30640701F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B648BF-3D1A-422E-AAAA-A30640701F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B648BF-3D1A-422E-AAAA-A30640701F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F36C84-7008-4FD0-8D1A-34F42B2AA38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F36C84-7008-4FD0-8D1A-34F42B2AA38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F36C84-7008-4FD0-8D1A-34F42B2AA38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F36C84-7008-4FD0-8D1A-34F42B2AA38F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC8D422-FF74-42E6-B3F8-A82B42DF62D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC8D422-FF74-42E6-B3F8-A82B42DF62D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC8D422-FF74-42E6-B3F8-A82B42DF62D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC8D422-FF74-42E6-B3F8-A82B42DF62D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
